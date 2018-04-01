@@ -3,5 +3,5 @@
     <button (click)="addToDo($event)">Add TODO</button>
 </div>
 <ul>
-    <li *ngFor="let e of todoItems" id="{{e.id}}">{{e.description}}</li>
+    <li *ngFor="let e of todoItems" id="{{e.id}}" (click)="removeToDo($event)">{{e.description}}</li>
 </ul>
