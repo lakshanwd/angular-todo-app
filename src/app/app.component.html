@@ -1,0 +1,7 @@
+<div>
+    <input type="text" [(ngModel)]="todo" />
+    <button (click)="addToDo($event)">Add TODO</button>
+</div>
+<ul>
+    <li *ngFor="let e of todoItems" id="{{e.id}}">{{e.description}}</li>
+</ul>
