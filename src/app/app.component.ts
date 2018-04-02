@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToDoItem } from './to-do-item';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
 
   addToDo($evt) {
     if (this.todo.length > 0) {
-      this.todoItems.push(new ToDoItem(0, this.todo));
+      this.todoItems.push(new ToDoItem(uuid(), this.todo));
       this.todo = '';
     }
   }

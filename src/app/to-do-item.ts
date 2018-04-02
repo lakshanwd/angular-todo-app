@@ -1,8 +1,8 @@
 export class ToDoItem {
-    id: number;
+    id: string;
     description: string;
 
-    constructor(id: number, description: string) {
+    constructor(id: string, description: string) {
         this.id = id;
         this.description = description;
     }

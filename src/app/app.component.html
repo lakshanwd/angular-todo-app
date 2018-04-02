@@ -1,7 +1,7 @@
-<div>
+<div class="wrapper">
     <input type="text" [(ngModel)]="todo" />
     <button (click)="addToDo($event)">Add TODO</button>
+    <ul>
+        <li *ngFor="let e of todoItems" mg-attr-data="e" (click)="removeToDo($event)">{{e.description}}</li>
+    </ul>
 </div>
-<ul>
-    <li *ngFor="let e of todoItems" id="{{e.id}}" (click)="removeToDo($event)">{{e.description}}</li>
-</ul>
